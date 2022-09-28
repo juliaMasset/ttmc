@@ -13,8 +13,8 @@ import {FormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     WelcomePageComponent,
-    ListUsersComponent,
-    AddUserComponent
+    AddUserComponent,
+    ListUsersComponent
   ],
   imports: [
     BrowserModule,

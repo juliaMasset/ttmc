@@ -7,8 +7,8 @@ import {WelcomePageComponent} from './pages/welcome-page/welcome-page.component'
 
 const routes: Routes = [
   { path: '', component: WelcomePageComponent },
-  { path: 'list', component: ListUsersComponent },
-  { path: 'add-user', component: AddUserComponent }];
+  { path: 'add-user', component: AddUserComponent },
+  { path: 'list-user', component: ListUsersComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
