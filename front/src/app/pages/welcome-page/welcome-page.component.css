@@ -1,7 +1,6 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url("src/assets/fonts/Bungee_Spice/"),
-    url("stockage/polices/Montserrat-Italic-VariableFont_wght.ttf");
+    font-family: "Bungee Spice";
+    src: url("src/assets/fonts/");
 }
 
 body /*Propriétés pour le body (Toute la page affichée)*/
