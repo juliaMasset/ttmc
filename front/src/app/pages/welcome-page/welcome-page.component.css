@@ -1,37 +1,48 @@
 @font-face {
-    font-family: "Bungee Spice";
-    src: url("src/assets/fonts/BungeeSpice-Regular.ttf");
+    font-family: "Bungee";
+    src: url("src/assets/fonts/BungeeInline-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Bungee Regular";
-    src: url("src/assets/fonts/Bungee-Regular.ttf");
+    font-family: "Montserrat";
+    src: url("src/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
-#corps
+#page
 {
-    margin:auto;
-    width: fit-content;
-    font-family: 'Bungee Spice', sans-serif;
-    background-image: url("src/assets/pexels-fwstudio-163999.jpg");
+    font-family: 'Bungee';
+    background: url("src/assets/pexels-fwstudio-164005.jpg");
     background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 51em;
+    padding-left: 15em;
+    padding-right: 15em;
+    margin:auto;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
     align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rectangle
+{
+    width:fit-content;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 30px;
+    padding: 2em;
+    margin-bottom: 5em;
 }
 
 h3
 {
     font-family: "Montserrat";
     font-weight: lighter;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 h2
 {
+    font-family: "Bungee";
     font-size: 25px;
     margin-top: 0;
     text-decoration: none;
@@ -39,19 +50,18 @@ h2
 
 h1
 {
+    font-family: "Bungee";
     font-size: 40px;
+    padding-bottom: 2em;
 }
 
 p
 {
     font-size: 20px;
     font-family: "Montserrat";
-    color: white;
-    margin-bottom: 0px;
 }
 
 .btn {
-    margin-top: 50px;
     border: 3px solid white;
     line-height: 2.5;
     padding: 0 15px;
@@ -60,7 +70,9 @@ p
     color: black;
     background-color: white;
     border-radius: 30px;
-    font-family: "Montserrat";
+    font-family: "Bungee";
     display: flex;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
