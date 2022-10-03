@@ -7,12 +7,14 @@ import { ListUsersComponent } from './pages/list-users/list-users.component';
 import { AddUserComponent } from './pages/add-user/add-user.component';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {GlobalGameComponent} from './pages/game/global-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListUsersComponent,
-    AddUserComponent
+    AddUserComponent,
+    GlobalGameComponent
   ],
   imports: [
     BrowserModule,
