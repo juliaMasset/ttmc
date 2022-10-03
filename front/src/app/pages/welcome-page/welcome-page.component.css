@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("src/assets/fonts/Bungee_Spice/"),
+    url("stockage/polices/Montserrat-Italic-VariableFont_wght.ttf");
+}
+
+body /*Propriétés pour le body (Toute la page affichée)*/
+{
+    margin:auto;
+    width: fit-content;
+    color: white;
+    font-family: 'Montserrat', sans-serif; ;
+    background-image: url("src/assets/pexels-fwstudio-163999.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#corps
+{
+    display: flex;
+    flex-direction: column;
+    height: 535px;
+    width: 1150px;
+    margin-top: 30px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3
+{
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+h2
+{
+    font-family: "Montserrat Semi-Bold";
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 0;
+    text-decoration: underline;
+    line-height: 30px;
+}
+
+h1
+{
+    font-family: "Montserrat Semi-Bold";
+    font-size: 40px;
+}
+
+p
+{
+    font-size: 20px;
+    font-family: "Montserrat";
+    color: white;
+    margin-bottom: 0px;
+}
+
+.btn {
+    margin-top: 50px;
+    border: 3px solid white;
+    line-height: 2.5;
+    padding: 0 15px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    font-family: "Montserrat";
+    display: flex;
+    align-items: center;
+}
