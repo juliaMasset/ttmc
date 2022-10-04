@@ -29,9 +29,14 @@
         </div>
     </div>
 
-    <div id="bas">
-        hello
+    <div *ngIf="joueurQuiJoue<0"
+         class="bas">
+        <button (click)="nextJoueur()">LEts goo</button>
     </div>
+    <div class="bas" *ngIf="joueurQuiJoue ==0">
+        tu as commmencé
+    </div>
+
 
 </div>
 

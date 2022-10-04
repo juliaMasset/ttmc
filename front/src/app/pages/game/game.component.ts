@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class GameComponent {
 
+    joueurQuiJoue = -1
+    constructor() {
+    }
+
+    nextJoueur(){
+        this.joueurQuiJoue ++
+    }
+
 }
