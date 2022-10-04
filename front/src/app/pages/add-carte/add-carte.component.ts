@@ -34,7 +34,7 @@ export class AddCarteComponent implements OnInit {
       reponseCinq: ngForm.form.value.reponseCinq,
     });
 
-    this.carteService.addCarte(carte).subscribe(() => this.router.navigateByUrl(''));
+    this.carteService.addCarte(carte).subscribe(() => this.router.navigateByUrl('http://localhost:4200/list-cartes'));
 
   }
 }
