@@ -1,3 +1,5 @@
+DROP TABLE cartes;
+
 create table cartes
 (
     id bigint auto_increment,

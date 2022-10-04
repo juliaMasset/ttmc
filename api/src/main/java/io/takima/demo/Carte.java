@@ -27,34 +27,34 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     private String titre;
 
     @Column(name = "question_une")
-    private String question_une;
+    private String questionUne;
 
     @Column(name = "question_deux")
-    private String question_deux;
+    private String questionDeux;
 
     @Column(name = "question_trois")
-    private String question_trois;
+    private String questionTrois;
 
     @Column(name = "question_quatre")
-    private String question_quatre;
+    private String questionQuatre;
 
     @Column(name = "question_cinq")
-    private String question_cinq;
+    private String questionCinq;
 
     @Column(name = "reponse_une")
-    private String reponse_une;
+    private String reponseUne;
 
     @Column(name = "reponse_deux")
-    private String reponse_deux;
+    private String reponseDeux;
 
     @Column(name = "reponse_trois")
-    private String reponse_trois;
+    private String reponseTrois;
 
     @Column(name = "reponse_quatre")
-    private String reponse_quatre;
+    private String reponseQuatre;
 
     @Column(name = "reponse_cinq")
-    private String reponse_cinq;
+    private String reponseCinq;
 
     public Carte() {
     }
@@ -63,104 +63,104 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getCategorie() {
         return categorie;
-    }
-
-    public void setCategorie(String categorie) {
-        this.categorie = categorie;
     }
 
     public String getTitre() {
         return titre;
     }
 
+    public String getQuestionUne() {
+        return questionUne;
+    }
+
+    public String getQuestionDeux() {
+        return questionDeux;
+    }
+
+    public String getQuestionTrois() {
+        return questionTrois;
+    }
+
+    public String getQuestionQuatre() {
+        return questionQuatre;
+    }
+
+    public String getQuestionCinq() {
+        return questionCinq;
+    }
+
+    public String getReponseUne() {
+        return reponseUne;
+    }
+
+    public String getReponseDeux() {
+        return reponseDeux;
+    }
+
+    public String getReponseTrois() {
+        return reponseTrois;
+    }
+
+    public String getReponseQuatre() {
+        return reponseQuatre;
+    }
+
+    public String getReponseCinq() {
+        return reponseCinq;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
     public void setTitre(String titre) {
         this.titre = titre;
     }
 
-    public String getQuestion_une() {
-        return question_une;
+    public void setQuestionUne(String questionUne) {
+        this.questionUne = questionUne;
     }
 
-    public void setQuestion_une(String question_une) {
-        this.question_une = question_une;
+    public void setQuestionDeux(String questionDeux) {
+        this.questionDeux = questionDeux;
     }
 
-    public String getQuestion_deux() {
-        return question_deux;
+    public void setQuestionTrois(String questionTrois) {
+        this.questionTrois = questionTrois;
     }
 
-    public void setQuestion_deux(String question_deux) {
-        this.question_deux = question_deux;
+    public void setQuestionQuatre(String questionQuatre) {
+        this.questionQuatre = questionQuatre;
     }
 
-    public String getQuestion_trois() {
-        return question_trois;
+    public void setQuestionCinq(String questionCinq) {
+        this.questionCinq = questionCinq;
     }
 
-    public void setQuestion_trois(String question_trois) {
-        this.question_trois = question_trois;
+    public void setReponseUne(String reponseUne) {
+        this.reponseUne = reponseUne;
     }
 
-    public String getQuestion_quatre() {
-        return question_quatre;
+    public void setReponseDeux(String reponseDeux) {
+        this.reponseDeux = reponseDeux;
     }
 
-    public void setQuestion_quatre(String question_quatre) {
-        this.question_quatre = question_quatre;
+    public void setReponseTrois(String reponseTrois) {
+        this.reponseTrois = reponseTrois;
     }
 
-    public String getQuestion_cinq() {
-        return question_cinq;
+    public void setReponseQuatre(String reponseQuatre) {
+        this.reponseQuatre = reponseQuatre;
     }
 
-    public void setQuestion_cinq(String question_cinq) {
-        this.question_cinq = question_cinq;
-    }
-
-    public String getReponse_une() {
-        return reponse_une;
-    }
-
-    public void setReponse_une(String reponse_une) {
-        this.reponse_une = reponse_une;
-    }
-
-    public String getReponse_deux() {
-        return reponse_deux;
-    }
-
-    public void setReponse_deux(String reponse_deux) {
-        this.reponse_deux = reponse_deux;
-    }
-
-    public String getReponse_trois() {
-        return reponse_trois;
-    }
-
-    public void setReponse_trois(String reponse_trois) {
-        this.reponse_trois = reponse_trois;
-    }
-
-    public String getReponse_quatre() {
-        return reponse_quatre;
-    }
-
-    public void setReponse_quatre(String reponse_quatre) {
-        this.reponse_quatre = reponse_quatre;
-    }
-
-    public String getReponse_cinq() {
-        return reponse_cinq;
-    }
-
-    public void setReponse_cinq(String reponse_cinq) {
-        this.reponse_cinq = reponse_cinq;
+    public void setReponseCinq(String reponseCinq) {
+        this.reponseCinq = reponseCinq;
     }
 
     @Override
@@ -168,12 +168,12 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Carte carte = (Carte) o;
-        return Objects.equals(id, carte.id) && Objects.equals(categorie, carte.categorie) && Objects.equals(titre, carte.titre) && Objects.equals(question_une, carte.question_une) && Objects.equals(question_deux, carte.question_deux) && Objects.equals(question_trois, carte.question_trois) && Objects.equals(question_quatre, carte.question_quatre) && Objects.equals(question_cinq, carte.question_cinq) && Objects.equals(reponse_une, carte.reponse_une) && Objects.equals(reponse_deux, carte.reponse_deux) && Objects.equals(reponse_trois, carte.reponse_trois) && Objects.equals(reponse_quatre, carte.reponse_quatre) && Objects.equals(reponse_cinq, carte.reponse_cinq);
+        return id.equals(carte.id) && categorie.equals(carte.categorie) && titre.equals(carte.titre) && questionUne.equals(carte.questionUne) && questionDeux.equals(carte.questionDeux) && questionTrois.equals(carte.questionTrois) && questionQuatre.equals(carte.questionQuatre) && questionCinq.equals(carte.questionCinq) && reponseUne.equals(carte.reponseUne) && reponseDeux.equals(carte.reponseDeux) && reponseTrois.equals(carte.reponseTrois) && reponseQuatre.equals(carte.reponseQuatre) && reponseCinq.equals(carte.reponseCinq);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, categorie, titre, question_une, question_deux, question_trois, question_quatre, question_cinq, reponse_une, reponse_deux, reponse_trois, reponse_quatre, reponse_cinq);
+        return Objects.hash(id, categorie, titre, questionUne, questionDeux, questionTrois, questionQuatre, questionCinq, reponseUne, reponseDeux, reponseTrois, reponseQuatre, reponseCinq);
     }
 
     @Override
@@ -182,16 +182,16 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
                 "id=" + id +
                 ", categorie='" + categorie + '\'' +
                 ", titre='" + titre + '\'' +
-                ", question_une='" + question_une + '\'' +
-                ", question_deux='" + question_deux + '\'' +
-                ", question_trois='" + question_trois + '\'' +
-                ", question_quatre='" + question_quatre + '\'' +
-                ", question_cinq='" + question_cinq + '\'' +
-                ", reponse_une='" + reponse_une + '\'' +
-                ", reponse_deux='" + reponse_deux + '\'' +
-                ", reponse_trois='" + reponse_trois + '\'' +
-                ", reponse_quatre='" + reponse_quatre + '\'' +
-                ", reponse_cinq='" + reponse_cinq + '\'' +
+                ", questionUne='" + questionUne + '\'' +
+                ", questionDeux='" + questionDeux + '\'' +
+                ", questionTrois='" + questionTrois + '\'' +
+                ", questionQuatre='" + questionQuatre + '\'' +
+                ", questionCinq='" + questionCinq + '\'' +
+                ", reponseUne='" + reponseUne + '\'' +
+                ", reponseDeux='" + reponseDeux + '\'' +
+                ", reponseTrois='" + reponseTrois + '\'' +
+                ", reponseQuatre='" + reponseQuatre + '\'' +
+                ", reponseCinq='" + reponseCinq + '\'' +
                 '}';
     }
 }

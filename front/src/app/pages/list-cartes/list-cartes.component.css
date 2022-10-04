@@ -1,0 +1,19 @@
+.topSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.listeCarte{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.topListe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom : 10px;
+}
