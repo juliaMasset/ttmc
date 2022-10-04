@@ -8,13 +8,15 @@ import { AddUserComponent } from './pages/add-user/add-user.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {GameComponent} from './pages/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     AddUserComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

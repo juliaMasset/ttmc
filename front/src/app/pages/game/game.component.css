@@ -1,0 +1,53 @@
+body {
+    background: url("src/assets/pexels-fwstudio-164005.jpg");
+    background-size: 100%;
+    height: 51em;
+}
+
+#close {
+    height: 90px;
+    float: right;
+}
+
+#title {
+    height: 80px;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bold;
+    color: aliceblue;
+    text-shadow: 2px 2px 3px black;
+}
+#map {
+    height: 650px;
+    float: left;
+}
+#close:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+.pawn {
+    height: 80px;
+    padding-right: 10px;
+}
+#pion {
+    position: relative;
+    top: 530px;
+    left: 230px;
+}
+#classsup {
+    display: flex;
+}
+.score {
+    position: relative;
+    top: 530px;
+    left: 230px;
+    font-size: 28px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black;
+    padding-right: 10px;
+}
+#contenu {
+    height: 650px;
+}

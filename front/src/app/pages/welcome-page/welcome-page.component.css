@@ -51,8 +51,7 @@ h2
 h1
 {
     font-family: "Bungee";
-    font-size: 40px;
-    padding-bottom: 2em;
+    font-size: 45px;
 }
 
 p
@@ -75,4 +74,9 @@ p
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    z-index: 1;
 }
