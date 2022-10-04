@@ -9,8 +9,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {GameComponent} from './pages/game/game.component';
-import { CarteQuestionsComponent } from './components/carte/carte-questions.component';
-import { CarteReponsesComponent } from './components/carte-reponses/carte-reponses.component';
+import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { CarteReponsesComponent } from './components/carte-reponses/carte-repons
     AddCarteComponent,
     ListCartesComponent,
     GameComponent,
-    CarteQuestionsComponent,
-    CarteReponsesComponent
+      TeamsPageComponent
   ],
   imports: [
     BrowserModule,
