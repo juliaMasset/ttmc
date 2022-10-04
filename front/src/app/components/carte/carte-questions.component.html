@@ -1,0 +1,43 @@
+<div class="carteRecto" [ngClass]="categorie">
+    <div class="titre">
+        <h5>Tu te mets combien ?</h5>
+        <h1>{{titre | uppercase}}</h1>
+    </div>
+
+    <div class="questions">
+        <div class="questionContainer">
+            <h2 [ngClass]="categorie">1</h2>
+            <h4>{{questionUne}}</h4>
+        </div>
+
+        <div class="greyLine"></div>
+
+        <div class="questionContainer">
+            <h2 [ngClass]="categorie">2</h2>
+            <h4>{{questionDeux}}</h4>
+        </div>
+
+        <div class="greyLine"></div>
+
+        <div class="questionContainer">
+            <h2 [ngClass]="categorie">3</h2>
+            <h4>{{questionTrois}}</h4>
+        </div>
+
+        <div class="greyLine"></div>
+
+        <div class="questionContainer">
+            <h2 [ngClass]="categorie">4</h2>
+            <h4>{{questionQuatre}}</h4>
+        </div>
+
+        <div class="greyLine"></div>
+
+        <div class="questionContainer">
+            <h2 [ngClass]="categorie">5</h2>
+            <h4>{{questionCinq}}</h4>
+        </div>
+
+    </div>
+
+</div>

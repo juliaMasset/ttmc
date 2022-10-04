@@ -1,9 +1,7 @@
 <div class="container">
-
   <div class="topSection">
     <h2>Panel administrateur</h2>
   </div>
-
   <div class="listeCarte">
     <div class="topListe">
       <h4>Liste des cartes du jeu</h4>
@@ -15,17 +13,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Catégorie</th>
-      <th scope="col">Titre</th>
-      <th scope="col">Q°1</th>
-      <th scope="col">Q°2</th>
-      <th scope="col">Q°3</th>
-      <th scope="col">Q°4</th>
-      <th scope="col">Q°5</th>
-      <th scope="col">Réponse 1</th>
-      <th scope="col">Réponse 2</th>
-      <th scope="col">Réponse 3</th>
-      <th scope="col">Réponse 4</th>
-      <th scope="col">Réponse 5</th>
+      <th scope="col">Questions</th>
+      <th scope="col">Réponses</th>
       <th scope="col"></th>
     </tr>
     </thead>
@@ -33,17 +22,8 @@
     <tr *ngFor="let carte of cartes">
       <td>{{carte.id}}</td>
       <td>{{carte.categorie}}</td>
-      <td>{{carte.titre}}</td>
-      <td>{{carte.questionUne}}</td>
-      <td>{{carte.questionDeux}}</td>
-      <td>{{carte.questionTrois}}</td>
-      <td>{{carte.questionQuatre}}</td>
-      <td>{{carte.questionCinq}}</td>
-      <td>{{carte.reponseUne}}</td>
-      <td>{{carte.reponseDeux}}</td>
-      <td>{{carte.reponseTrois}}</td>
-      <td>{{carte.reponseQuatre}}</td>
-      <td>{{carte.reponseCinq}}</td>
+      <td><app-carte [categorie]="carte.categorie" [titre]="carte.titre" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
+      <td><app-carte-reponses [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>
       <td><button type="button" class="btn btn-danger deleteButton" (click)="deleteCarte(carte.id)">Delete</button></td>
     </tr>
     </tbody>

@@ -9,6 +9,8 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {GameComponent} from './pages/game/game.component';
+import { CarteQuestionsComponent } from './components/carte/carte-questions.component';
+import { CarteReponsesComponent } from './components/carte-reponses/carte-reponses.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {GameComponent} from './pages/game/game.component';
     WelcomePageComponent,
     AddCarteComponent,
     ListCartesComponent,
-    GameComponent
+    GameComponent,
+    CarteQuestionsComponent,
+    CarteReponsesComponent
   ],
   imports: [
     BrowserModule,
