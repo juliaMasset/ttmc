@@ -11,20 +11,38 @@
 body {
     background: url("src/assets/pexels-fwstudio-164005.jpg");
     background-size: 100%;
+    width: 100%;
     height: 51em;
-    display: flex;
-    flex-direction: column;
-}
-
-#header
-{
     display: flex;
     flex-direction: row;
 }
 
-#close {
-    height: 70px;
-    float: left;
+#map {
+    height: 790px;
+    padding: 20px;
+}
+
+#contenu {
+    margin: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#haut
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+}
+
+#bas
+{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
 }
 
 #title {
@@ -36,13 +54,16 @@ body {
     color: #000b18;
 }
 
-#map {
-    height: 700px;
+#scores
+{
+    display: flex;
+    flex-direction: row;
 }
 
-#close:hover {
-    transform: scale(1.1);
-    z-index: 1;
+#classement
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .pawn {
@@ -50,30 +71,14 @@ body {
     padding-right: 10px;
 }
 
-#pion {
+.case {
     position: relative;
-    top: 530px;
-    left: 200px;
-}
-
-#classsup {
-    display: flex;
-}
-
-.score {
-    position: relative;
-    top: 530px;
-    left: 200px;
     font-size: 23px;
     color: #000000;
     padding-right: 10px;
     font-family: Bungee;
 }
 
-#contenu {
-    height: 650px;
-    display: flex;
-    flex-direction: row;
-}
+
 
 

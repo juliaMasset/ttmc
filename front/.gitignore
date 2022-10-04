@@ -45,6 +45,6 @@ typings
 # System Files
 .DS_Store
 Thumbs.db
-*.ts.icloud
+*.icloud
 .angular
 
