@@ -37,7 +37,7 @@ body {
 }
 
 #map {
-    height: 680px;
+    height: 700px;
 }
 
 #close:hover {
@@ -53,7 +53,7 @@ body {
 #pion {
     position: relative;
     top: 530px;
-    left: 230px;
+    left: 200px;
 }
 
 #classsup {
@@ -63,7 +63,7 @@ body {
 .score {
     position: relative;
     top: 530px;
-    left: 230px;
+    left: 200px;
     font-size: 23px;
     color: #000000;
     padding-right: 10px;
@@ -75,3 +75,5 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+
