@@ -40,9 +40,14 @@ body {
 
 .bas
 {
-    background-color: aqua;
     width: 100%;
     height: 100%;
+    font-family: Bungee;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #title {
@@ -79,6 +84,25 @@ body {
     font-family: Bungee;
 }
 
+.btn {
+    border: 3px solid white;
+    line-height: 2.5;
+    padding: 0 15px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    font-family: "Bungee";
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.btn:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
 
 
