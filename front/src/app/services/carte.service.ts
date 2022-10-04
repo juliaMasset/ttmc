@@ -30,4 +30,8 @@ export class CarteService {
     return this.http.delete(`${this.url}/cartes/${id}`).pipe(timeout(10000));
   }
 
+  tirerCarte(numCase: number ):Observable<Carte> {
+    return this.http.get<Carte>(`${this.url}/cartes/tirerCarte/${numCase}`).pipe(timeout(10000));
+  }
+
 }

@@ -6,5 +6,15 @@
 a {
   margin-right: 40px;
   margin-left: 20px;
+  font-family: Bungee;
 }
 
+@font-face {
+  font-family: "Bungee";
+  src: url("src/assets/fonts/BungeeInline-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("src/assets/fonts/Montserrat-VariableFont_wght.ttf");
+}

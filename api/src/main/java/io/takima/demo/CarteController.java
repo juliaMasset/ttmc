@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/cartes")
@@ -35,4 +36,24 @@ public class CarteController {
         this.carteDAO.deleteById(id);
     }
 
+    @GetMapping("/tirerCarte/{numCase}")
+    public Carte tirerCarteByCase(@PathVariable int numCase) { Carte carte = null;
+        List<Carte> listCartes = new ArrayList<>();
+        Random rand = new Random();
+        switch (numCase) {
+            case 1:
+            case 5:
+            case 10:
+            case 13:
+            case 18:
+            case 22:
+            case 26:
+            case 29:
+                listCartes = carteDAO.findAllByCategorie("Improbable");
+                carte = listCartes.get(rand.nextInt(listCartes.size()));
+                break;
+
+        }
+        return carte;
+    }
 }
