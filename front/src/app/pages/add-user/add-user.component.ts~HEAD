@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {CarteService} from '../../services/carte.service';
+import {UserService} from '../../services/user.service';
 import { defaultsDeep } from 'lodash';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-add-carte',
-  templateUrl: './add-carte.component.html',
-  styleUrls: ['./add-carte.component.css']
+  selector: 'app-add-user',
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.css']
 })
-export class AddCarteComponent implements OnInit {
+export class AddUserComponent implements OnInit {
 
-  constructor(private carteService: CarteService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit(ngForm: NgForm) {
     console.log(ngForm);
-    const carte = defaultsDeep({
+    const user = defaultsDeep({
       id: null,
       categorie: ngForm.form.value.categorie,
       titre: ngForm.form.value.titre,
@@ -34,7 +34,11 @@ export class AddCarteComponent implements OnInit {
       reponseCinq: ngForm.form.value.reponseCinq,
     });
 
+<<<<<<< HEAD:front/src/app/pages/add-user/add-user.component.ts
+    this.userService.addUser(user).subscribe(user => console.log(user));
+=======
     this.carteService.addCarte(carte).subscribe(() => this.router.navigateByUrl(''));
+>>>>>>> 7fdc3bb (formulaire ajout carte admin):front/src/app/pages/add-carte/add-carte.component.ts
 
   }
 }
