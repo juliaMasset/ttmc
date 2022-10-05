@@ -52,6 +52,41 @@ public class CarteController {
                 listCartes = carteDAO.findAllByCategorie("Improbable");
                 carte = listCartes.get(rand.nextInt(listCartes.size()));
                 break;
+            case 2:
+            case 7:
+            case 11:
+            case 15:
+            case 19:
+            case 24:
+            case 27:
+            case 31:
+            case 34:
+                listCartes = carteDAO.findAllByCategorie("Mature");
+                carte = listCartes.get(rand.nextInt(listCartes.size()));
+                break;
+            case 3:
+            case 6:
+            case 9:
+            case 14:
+            case 17:
+            case 20:
+            case 23:
+            case 28:
+            case 32:
+                listCartes = carteDAO.findAllByCategorie("Scolaire");
+                carte = listCartes.get(rand.nextInt(listCartes.size()));
+                break;
+            case 4:
+            case 8:
+            case 12:
+            case 16:
+            case 21:
+            case 25:
+            case 30:
+            case 33:
+                listCartes = carteDAO.findAllByCategorie("Plaisir");
+                carte = listCartes.get(rand.nextInt(listCartes.size()));
+                break;
 
         }
         return carte;

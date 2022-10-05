@@ -1,27 +1,27 @@
 
-<body>
+<body> <!-- page complete -->
 
-<img id="map" src="assets/map.png" alt="Plateau du jeu">
+<img id="map" src="assets/map.png" alt="Plateau du jeu"> <!-- plateau de jeu à gauche de l'ecran -->
 
-<div id="contenu">
+<div id="contenu"> <!-- zone à droite du plateau de jeu -->
 
-    <div id="haut">
+    <div id="haut"> <!-- partie haute à droite : équipe à jouer et scores -->
         <div id="title">
-            Equipe {{joueurQuiJoue}}, à toi de jouer
+            Equipe {{joueurQuiJoue}}, <br> à toi de jouer
         </div>
 
-        <div id="scores">
-            <div class="classement" id="pion1">
+        <div id="scores"> <!-- zone des scores -->
+            <div class="classement">
                 <img class="pawn" src="assets/pawn1.png" alt="Pion Equipe 1">
                 <div class="case"> Case {{numCaseJoueurs[0]}}</div>
             </div>
 
-            <div class="classement" id="pion2">
+            <div class="classement">
                 <img class="pawn" src="assets/pawn2.png" alt="Pion Equipe 2">
                 <div class="case">Case {{numCaseJoueurs[1]}}</div>
             </div>
 
-            <div class="classement" id="pion3">
+            <div class="classement">
                 <img class="pawn" src="assets/pawn3.png" alt="Pion Equipe 3">
                 <div class="case">Case {{numCaseJoueurs[2]}}</div>
             </div>
@@ -32,8 +32,11 @@
     <div *ngIf="etape==1" class="bas">
         <button class="btn" (click)="tirerCarte()">Tirer une carte</button>
     </div>
+
     <div class="bas" *ngIf="etape==2">
-        {{carte.titre}}
+        <div id="rectangle">
+            {{carte.titre}}
+        </div>
     </div>
 
 </div>

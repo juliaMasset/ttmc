@@ -10,6 +10,8 @@ import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {GameComponent} from './pages/game/game.component';
 import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
+import {CarteReponsesComponent} from "./components/carte-reponses/carte-reponses.component";
+import {CarteQuestionsComponent} from "./components/carte/carte-questions.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
     AddCarteComponent,
     ListCartesComponent,
     GameComponent,
-      TeamsPageComponent
+    TeamsPageComponent,
+    CarteReponsesComponent,
+    CarteQuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,9 @@ import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
     FormsModule
   ],
   providers: [],
+  exports: [
+    CarteReponsesComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
