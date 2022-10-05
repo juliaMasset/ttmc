@@ -1,45 +1,67 @@
 
 <body> <!-- page complete -->
 
-<img id="map" src="assets/map.png" alt="Plateau du jeu"> <!-- plateau de jeu à gauche de l'ecran -->
+    <img id="map" src="assets/map.png" alt="Plateau du jeu"> <!-- plateau de jeu à gauche de l'ecran -->
 
-<div id="contenu"> <!-- zone à droite du plateau de jeu -->
+    <div id="contenu"> <!-- zone à droite du plateau de jeu -->
 
-    <div id="haut"> <!-- partie haute à droite : équipe à jouer et scores -->
-        <div id="title">
-            Equipe {{joueurQuiJoue}}, <br> à toi de jouer
-        </div>
-
-        <div id="scores"> <!-- zone des scores -->
-            <div class="classement">
-                <img class="pawn" src="assets/pawn1.png" alt="Pion Equipe 1">
-                <div class="case"> Case {{numCaseJoueurs[0]}}</div>
+        <div id="haut"> <!-- partie haute à droite : équipe à jouer et scores -->
+            <div id="title">
+                Equipe {{joueurQuiJoue}}, <br> à toi de jouer
             </div>
 
-            <div class="classement">
-                <img class="pawn" src="assets/pawn2.png" alt="Pion Equipe 2">
-                <div class="case">Case {{numCaseJoueurs[1]}}</div>
+            <div id="scores"> <!-- zone des scores -->
+                <div class="classement"> <!-- joueur 1 -->
+                    <img class="pawn" src="assets/pawn1.png" alt="Pion Equipe 1">
+                    <div class="case"> Case {{numCaseJoueurs[0]}}</div>
+                </div>
+
+                <div class="classement"> <!-- joueur 2 -->
+                    <img class="pawn" src="assets/pawn2.png" alt="Pion Equipe 2">
+                    <div class="case">Case {{numCaseJoueurs[1]}}</div>
+                </div>
+
+                <div class="classement"> <!-- joueur 3 -->
+                    <img class="pawn" src="assets/pawn3.png" alt="Pion Equipe 3">
+                    <div class="case">Case {{numCaseJoueurs[2]}}</div>
+                </div>
+
             </div>
+        </div> <!-- fin de la div haut -->
 
-            <div class="classement">
-                <img class="pawn" src="assets/pawn3.png" alt="Pion Equipe 3">
-                <div class="case">Case {{numCaseJoueurs[2]}}</div>
+        <!-- zone de jeu en bas à droite : class "bas"-->
+        <div *ngIf="etape==1" class="bas"> <!-- etape 1: tirer la carte en fonction de la categorie pour afficher le titre -->
+            <button class="btn" (click)="tirerCarte()">Tirer une carte</button>
+        </div>
+
+        <div class="bas" *ngIf="etape==2"> <!-- etape 2: choisir le numero de la question après affichage du titre -->
+            <div id="rectangle">
+                {{carte.titre}} <br>
+                <p> Tu te mets combien ? </p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">5</label>
+                </div>
             </div>
-
+            <button class="btn">Voir la question</button>
         </div>
-    </div>
 
-    <div *ngIf="etape==1" class="bas">
-        <button class="btn" (click)="tirerCarte()">Tirer une carte</button>
     </div>
-
-    <div class="bas" *ngIf="etape==2">
-        <div id="rectangle">
-            {{carte.titre}} <br>
-            <p> Tu te mets combien ? </p>
-        </div>
-    </div>
-
-</div>
 
 </body>
