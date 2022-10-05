@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {FormBuilder, NgForm} from '@angular/forms';
 import {CarteService} from '../../services/carte.service';
 import { defaultsDeep } from 'lodash';
 import {Router} from '@angular/router';
@@ -34,7 +34,8 @@ export class AddCarteComponent implements OnInit {
       reponseCinq: ngForm.form.value.reponseCinq,
     });
 
-    this.carteService.addCarte(carte).subscribe(() => this.router.navigateByUrl('http://localhost:4200/list-cartes'));
+    this.carteService.addCarte(carte).subscribe(() => this.router.navigateByUrl('list-cartes'));
 
   }
 }
+

@@ -44,10 +44,13 @@ h2.Scolaire{
 }
 
 .carteRecto {
-    width: 400px;
-    padding: 10px;
+    width: 300px;
+    height: 440px;
     border-radius: 20px;
-
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,11 +66,13 @@ h2.Scolaire{
 
 .questions{
 background: #F5F2DF;
-    padding: 10px;
+    width: 90%;
+    height: 80%;
+    padding: 3%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -99,13 +104,13 @@ h5{
 
 h4{
     font-family: 'Montserrat';
-    font-size:14px;
+    font-size:12px;
     padding-left: 10px;
 }
 
 .greyLine{
     height: 0px;
-    width: 370px;
+    width: 95%;
     border-top: 1px solid #AAAAAA;
     margin-bottom: 6px;
 }

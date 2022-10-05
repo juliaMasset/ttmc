@@ -1,19 +1,132 @@
-.topSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
 .listeCarte{
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
 .topListe{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom : 10px;
+    margin-bottom : 20px;
+}
+
+@font-face {
+    font-family: "Bungee";
+    src: url("src/assets/fonts/BungeeInline-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("src/assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+
+#page{
+    width: 100%;
+    background: url("src/assets/pexels-fwstudio-164005.jpg");
+    background-size: 100%;
+    padding: 40px;
+}
+
+h4{
+    font-family: 'Bungee';
+    font-size: 30px;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+h3{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#listeCarteAdmin{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#carteAdmin{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#delete{
+    width: 15%;
+}
+
+#voir,#voirReponses{
+    width: 84%;
+}
+
+#carte{
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+#imageDelete,#imageAdd{
+    width: 20px;
+}
+
+#imageAdd{
+    margin-right: 10px;
+}
+
+.addCarte{
+    background-color: #343A40;
+    color: white;
+    border-radius: 10px;
+    padding: 5%;
+    font-family: 'Montserrat';
+    width: 230px;
+    font-weight: bold;
+    border: 0px solid white;
+}
+
+.addCarte:hover{
+    background-color: #4c5359;
+}
+
+.bouton{
+    background-color: #3a3b41;
+    color: white;
+    border-radius: 10px;
+    padding: 1px;
+    font-family: 'Montserrat';
+    width: 230px;
+    font-weight: bold;
+    border: 0px solid white;
+    height: 40px;
+    align-content: center;
+}
+
+.bouton:hover{
+    background-color: #4c5359;
+}
+
+.boutonDelete:hover{
+    background-color: #4c5359;
+}
+
+.boutonDelete{
+    background-color: #3a3b41;
+    color: white;
+    border-radius: 10px;
+    padding: 1px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    border: 0px solid white;
+    height: 40px;
 }
