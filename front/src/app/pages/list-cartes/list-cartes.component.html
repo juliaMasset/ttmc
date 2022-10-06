@@ -1,33 +1,28 @@
-<div class="container">
-  <div class="topSection">
-    <h2>Panel administrateur</h2>
-  </div>
+<div id="page">
+
   <div class="listeCarte">
     <div class="topListe">
-      <h4>Liste des cartes du jeu</h4>
-      <a href="http://localhost:4200/add-carte"><button class="btn btn-primary" type="submit">Ajouter une nouvelle carte </button>
+      <h4>Cartes du jeu</h4>
+      <a href="http://localhost:4200/add-carte"><button class="addCarte" type="submit"><img id="imageAdd" src="./assets/addCarte.png" >AJOUTER UNE CARTE</button>
       </a>
     </div>
-    <table class="table table-striped table-bordered table-hover">
-    <thead class="thead">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Catégorie</th>
-      <th scope="col">Questions</th>
-      <th scope="col">Réponses</th>
-      <th scope="col"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let carte of cartes">
-      <td>{{carte.id}}</td>
-      <td>{{carte.categorie}}</td>
-      <td><app-carte [categorie]="carte.categorie" [titre]="carte.titre" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
-      <td><app-carte-reponses [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>
-      <td><button type="button" class="btn btn-danger deleteButton" (click)="deleteCarte(carte.id)">Delete</button></td>
-    </tr>
-    </tbody>
-  </table>
+
+    <div id="listeCarteAdmin">
+    <div  id="carte" *ngFor="let carte of cartes">
+      <div id="carteAdmin">
+        <app-carte *ngIf="!reponsesAffichees"  [categorie]="carte.categorie" [titre]="carte.titre" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
+        <app-carte-reponses *ngIf="reponsesAffichees"  [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>
+      <!---<app-carte-reponses [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>--->
+        <div id="buttons">
+        <button *ngIf="!reponsesAffichees" id="voir" type="button" class="bouton" (click)="showReponses()">Voir les réponses</button>
+          <button *ngIf="reponsesAffichees" id="voirReponses" type="button" class="bouton" (click)="showReponses()">Voir les questions</button>
+
+          <button id="delete" type="button" class="boutonDelete" (click)="deleteCarte(carte.id)"><img id="imageDelete" src="./assets/deleteIcon.png"></button>
+        </div>
+      </div>
+    </div>
+    </div>
+
   </div>
 </div>
 

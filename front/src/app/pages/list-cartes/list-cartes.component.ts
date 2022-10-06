@@ -10,6 +10,7 @@ import {Carte} from '../../models/carte.model';
 })
 export class ListCartesComponent implements OnInit {
 
+    reponsesAffichees = false;
     cartes: Carte[];
 
     constructor(private http: HttpClient,private carteService: CarteService) {
@@ -24,6 +25,10 @@ export class ListCartesComponent implements OnInit {
         this.carteService.deleteCarte(id).subscribe(succes => {
             this.cartes = this.cartes.filter(carte => carte.id !== id)
         });
+    }
+
+    showReponses() {
+        this.reponsesAffichees=!this.reponsesAffichees;
     }
 
 }
