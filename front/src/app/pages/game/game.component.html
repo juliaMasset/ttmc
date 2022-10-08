@@ -1,45 +1,76 @@
 
 <body> <!-- page complete -->
 
-<img id="map" src="assets/map.png" alt="Plateau du jeu"> <!-- plateau de jeu à gauche de l'ecran -->
+    <img id="map" src="assets/map.png" alt="Plateau du jeu"> <!-- plateau de jeu à gauche de l'ecran -->
 
-<div id="contenu"> <!-- zone à droite du plateau de jeu -->
+    <div id="contenu"> <!-- zone à droite du plateau de jeu -->
 
-    <div id="haut"> <!-- partie haute à droite : équipe à jouer et scores -->
-        <div id="title">
-            Equipe {{joueurQuiJoue}}, <br> à toi de jouer
-        </div>
-
-        <div id="scores"> <!-- zone des scores -->
-            <div class="classement">
-                <img class="pawn" src="assets/pawn1.png" alt="Pion Equipe 1">
-                <div class="case"> Case {{numCaseJoueurs[0]}}</div>
+        <div id="haut"> <!-- partie haute à droite : équipe à jouer et scores -->
+            <div id="title">
+                Equipe {{joueurQuiJoue}}, <br> à toi de jouer
             </div>
 
-            <div class="classement">
-                <img class="pawn" src="assets/pawn2.png" alt="Pion Equipe 2">
-                <div class="case">Case {{numCaseJoueurs[1]}}</div>
+            <div id="scores"> <!-- zone des scores -->
+                <div class="classement"> <!-- joueur 1 -->
+                    <img class="pawn" src="assets/pawn1.png" alt="Pion Equipe 1">
+                    <div class="case"> Case {{numCaseJoueurs[0]}}</div>
+                </div>
+
+                <div class="classement"> <!-- joueur 2 -->
+                    <img class="pawn" src="assets/pawn2.png" alt="Pion Equipe 2">
+                    <div class="case">Case {{numCaseJoueurs[1]}}</div>
+                </div>
+
+                <div class="classement"> <!-- joueur 3 -->
+                    <img class="pawn" src="assets/pawn3.png" alt="Pion Equipe 3">
+                    <div class="case">Case {{numCaseJoueurs[2]}}</div>
+                </div>
+
             </div>
+        </div> <!-- fin de la div haut -->
 
-            <div class="classement">
-                <img class="pawn" src="assets/pawn3.png" alt="Pion Equipe 3">
-                <div class="case">Case {{numCaseJoueurs[2]}}</div>
+        <!-- zone de jeu en bas à droite : class "bas"-->
+        <div *ngIf="etape==1" class="bas"> <!-- etape 1: tirer la carte en fonction de la categorie pour afficher le titre -->
+            <button class="btn" (click)="tirerCarte()">Tirer une carte</button>
+        </div>
+
+        <div class="bas" *ngIf="etape==2"> <!-- etape 2: choisir le numero de la question après affichage du titre -->
+            <div class="rectangle">
+                {{carte.titre}} <br>
+                    <p> Tu te mets combien ? </p>
+
+                <form name="myForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <div class="form-group">
+                        <select class="form-control" id="niveau" name="niveau" ngModel>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button class="btn" type="submit" (click)="nextEtape()">Voir la question</button>
+                </form>
             </div>
-
         </div>
-    </div>
 
-    <div *ngIf="etape==1" class="bas">
-        <button class="btn" (click)="tirerCarte()">Tirer une carte</button>
-    </div>
-
-    <div class="bas" *ngIf="etape==2">
-        <div id="rectangle">
-            {{carte.titre}} <br>
-            <p> Tu te mets combien ? </p>
+        <div class="bas" *ngIf="etape==3"> <!-- etape 3: voir les questions pour la poser à l'équipe -->
+            <div *ngIf="carte.titre == carte.titre">
+                <app-carte [categorie]="carte.categorie" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
+            </div>
+            <button class="btn" (click)="nextEtape()">Voir la réponse</button>
         </div>
-    </div>
 
-</div>
+        <div class="bas" *ngIf="etape==4"> <!-- etape 4: voir les réponses et valider ou non -->
+            <div *ngIf="carte.titre == carte.titre">
+                <app-carte-reponses [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>
+            </div>
+            <div class="reponse">
+                <button class="btn" id="bonneReponse" (click)="nextEtape()">Bonne réponse</button>
+                <button class="btn" id="mauvaiseReponse" (click)="nextEtape()">Mauvaise réponse</button>
+            </div>
+        </div>
+
+    </div>
 
 </body>
