@@ -105,7 +105,7 @@ body {
     z-index: 0.5;
 }
 
-#rectangle
+.rectangle
 {
     width:fit-content;
     background-color: rgba(255, 255, 255, 0.65);
@@ -120,3 +120,29 @@ p
     font-family: "Montserrat";
 }
 
+.form-group
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reponse
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#bonneReponse
+{
+    background-color: #45bd35;
+    border: none;
+}
+
+#mauvaiseReponse
+{
+    background-color: #b90000;
+    border: none;
+}

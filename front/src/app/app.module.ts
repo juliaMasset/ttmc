@@ -7,11 +7,11 @@ import { ListCartesComponent } from './pages/list-cartes/list-cartes.component';
 import { AddCarteComponent } from './pages/add-carte/add-carte.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {GameComponent} from './pages/game/game.component';
 import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
-import {CarteReponsesComponent} from "./components/carte-reponses/carte-reponses.component";
-import {CarteQuestionsComponent} from "./components/carte/carte-questions.component";
+import {CarteReponsesComponent} from './components/carte-reponses/carte-reponses.component';
+import {CarteQuestionsComponent} from './components/carte/carte-questions.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import {CarteQuestionsComponent} from "./components/carte/carte-questions.compon
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   exports: [
