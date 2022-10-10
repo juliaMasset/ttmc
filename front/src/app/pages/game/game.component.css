@@ -56,6 +56,7 @@ body {
     font-size: 40px;
     font-family: Bungee;
     color: #000b18;
+    stroke: white;
 }
 
 #scores
@@ -112,6 +113,7 @@ body {
     border-radius: 30px;
     padding: 2em;
     text-align: center;
+    color: white;
 }
 
 p
@@ -147,10 +149,28 @@ form
 {
     background-color: #6BC555;
     border: none;
+    color: white;
 }
 
 #mauvaiseReponse
 {
     background-color: #EC1D1D;
+    color: white;
     border: none;
+}
+
+.Improbable{
+    background: #64308D;
+}
+
+.Plaisir{
+    background: #EC1D1D;
+}
+
+.Mature{
+    background: #1881BC;
+}
+
+.Scolaire{
+    background: #6BC555;
 }

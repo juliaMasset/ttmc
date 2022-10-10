@@ -35,7 +35,7 @@
         </div>
 
         <div class="bas" *ngIf="etape==2"> <!-- etape 2: choisir le numero de la question après affichage du titre -->
-            <div class="rectangle">
+            <div class="rectangle" [ngClass]="carte.categorie">
                 {{carte?.titre}} <br>
                     <p> Tu te mets combien ? </p>
 
