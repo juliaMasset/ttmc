@@ -3,7 +3,7 @@ import {CarteService} from '../../services/carte.service';
 import {NgForm} from '@angular/forms';
 import { defaultsDeep } from 'lodash';
 import {Router} from '@angular/router';
-import {GameService} from "../../services/game.service";
+import {GameService} from '../../services/game.service';
 
 
 @Component({
@@ -22,7 +22,7 @@ export class GameComponent implements OnInit {
     numCaseJoueurs = [1, 1, 1]
     carte = null
 
-    constructor(private carteService: CarteService, private router: Router, private service: GameService) {
+    constructor(private carteService: CarteService, private router: Router) {
     }
 
     nextJoueur() {
@@ -42,7 +42,6 @@ export class GameComponent implements OnInit {
     nextEtape() {
         this.etape++
         if(this.numCaseJoueurs[this.joueurQuiJoue - 1] >= 35){
-            this.service.saveGame({winner: this.joueurQuiJoue, score: this.numCaseJoueurs})
             this.router.navigateByUrl('winner')
         }
         if(this.etape > this.lastEtape) {
