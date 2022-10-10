@@ -1,6 +1,7 @@
 #conteneur {
     background: url("src/assets/pexels-fwstudio-164005.jpg");
     background-size: 100%;
+    height: 51em;
 }
 
 #podium{
@@ -41,4 +42,9 @@
     text-align: center;
     padding-top: 3em;
     font-family: "Bungee";
+}
+
+.pawn
+{
+    height: 80px;
 }
