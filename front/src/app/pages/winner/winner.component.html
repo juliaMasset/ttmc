@@ -1,11 +1,29 @@
 <div id="conteneur">
 
-<div id="title"> Équipe 1, vous avez gagné !!</div>
+<div id="title"> Equipe {{game.winner}}, vous avez gagné !!</div>
 
-<div id="podium">
-    <div id="pod1">2</div>
-    <div id="pod2">1 <img id="trophy" src="../../../assets/trophy.png" alt="Trophée">
+    <div id="podium">
+        <div id="pod1">
+            <img *ngIf="classement[1]==1" src="../../../assets/pawn1.png" class="pawn">
+            <img *ngIf="classement[1]==2" src="../../../assets/pawn2.png" class="pawn">
+            <img *ngIf="classement[1]==3" src="../../../assets/pawn3.png" class="pawn">
+            2
+        </div>
+
+        <div id="pod2">
+            <img *ngIf="game.winner == 1" src="../../../assets/pawn1.png" class="pawn">
+            <img *ngIf="game.winner == 2" src="../../../assets/pawn2.png" class="pawn">
+            <img *ngIf="game.winner == 3" src="../../../assets/pawn3.png" class="pawn">
+            1
+            <img id="trophy" src="../../../assets/trophy.png" alt="Trophée">
+        </div>
+
+        <div id="pod3">
+            <img *ngIf="classement[2]==1" src="../../../assets/pawn1.png" class="pawn">
+            <img *ngIf="classement[2]==2"src="../../../assets/pawn2.png" class="pawn">
+            <img *ngIf="classement[2]==3"src="../../../assets/pawn3.png" class="pawn">
+            3
+        </div>
+
     </div>
-    <div id="pod3">3</div>
-</div>
 </div>
