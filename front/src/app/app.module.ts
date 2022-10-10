@@ -12,6 +12,7 @@ import {GameComponent} from './pages/game/game.component';
 import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
 import {CarteReponsesComponent} from './components/carte-reponses/carte-reponses.component';
 import {CarteQuestionsComponent} from './components/carte/carte-questions.component';
+import {WinnerComponent} from './pages/winner/winner.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {CarteQuestionsComponent} from './components/carte/carte-questions.compon
     GameComponent,
     TeamsPageComponent,
     CarteReponsesComponent,
-    CarteQuestionsComponent
+    CarteQuestionsComponent,
+    WinnerComponent
   ],
   imports: [
     BrowserModule,

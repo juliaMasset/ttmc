@@ -36,7 +36,7 @@
 
         <div class="bas" *ngIf="etape==2"> <!-- etape 2: choisir le numero de la question après affichage du titre -->
             <div class="rectangle">
-                {{carte.titre}} <br>
+                {{carte?.titre}} <br>
                     <p> Tu te mets combien ? </p>
 
                 <form name="myForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
@@ -49,14 +49,14 @@
                             <option value="5">5</option>
                         </select>
                     </div>
-                    <button class="btn" type="submit" (click)="nextEtape()">Voir la question</button>
+                    <button class="btn" type="submit">Voir la question</button>
                 </form>
             </div>
         </div>
 
         <div class="bas" *ngIf="etape==3"> <!-- etape 3: voir les questions pour la poser à l'équipe -->
             <div *ngIf="carte.titre == carte.titre">
-                <app-carte [categorie]="carte.categorie" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
+                <app-carte [categorie]="carte.categorie" [titre]="carte.titre" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
             </div>
             <button class="btn" (click)="nextEtape()">Voir la réponse</button>
         </div>
@@ -66,7 +66,7 @@
                 <app-carte-reponses [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>
             </div>
             <div class="reponse">
-                <button class="btn" id="bonneReponse" (click)="nextEtape()">Bonne réponse</button>
+                <button class="btn" id="bonneReponse" (click)="modifScore()">Bonne réponse</button>
                 <button class="btn" id="mauvaiseReponse" (click)="nextEtape()">Mauvaise réponse</button>
             </div>
         </div>

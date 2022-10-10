@@ -12,6 +12,7 @@ import {Router} from '@angular/router';
 })
 export class GameComponent implements OnInit {
 
+    niveauQuestion = null
     etape = 1
     lastEtape = 4
     nombreDeJoueur = 3
@@ -19,7 +20,7 @@ export class GameComponent implements OnInit {
     numCaseJoueurs = [1, 1, 1]
     carte = null
 
-    constructor(private carteService: CarteService) {
+    constructor(private carteService: CarteService, private router: Router) {
     }
 
     nextJoueur() {
@@ -36,10 +37,18 @@ export class GameComponent implements OnInit {
 
     nextEtape() {
         this.etape++
-        if (this.etape > this.lastEtape) {
+        if(this.numCaseJoueurs[this.joueurQuiJoue - 1] >= 35){
+            this.router.navigateByUrl('winner')
+        }
+        if(this.etape > this.lastEtape) {
             this.nextJoueur()
             this.etape = 1
         }
+    }
+
+    modifScore(){
+        this.numCaseJoueurs[this.joueurQuiJoue - 1] += this.niveauQuestion
+        this.nextEtape()
     }
 
     ngOnInit() {
@@ -47,8 +56,8 @@ export class GameComponent implements OnInit {
 
     onSubmit(ngForm: NgForm) {
         console.log(ngForm);
-        const niveau = {
-            niveau: ngForm.form.value.niveau
-        }
+        this.niveauQuestion = parseInt(ngForm.form.value.niveau, 10)
+        console.log(this.niveauQuestion)
+        this.nextEtape()
     }
 }
