@@ -17,6 +17,7 @@ export class GameComponent implements OnInit {
     lastEtape = 4
     nombreDeJoueur = 3
     joueurQuiJoue = 1
+    joueur = `joueur${this.joueurQuiJoue}`
     numCaseJoueurs = [1, 1, 1]
     carte = null
 
@@ -25,8 +26,10 @@ export class GameComponent implements OnInit {
 
     nextJoueur() {
         this.joueurQuiJoue++
+        this.joueur = `joueur${this.joueurQuiJoue}`
         if (this.joueurQuiJoue > this.nombreDeJoueur) {
             this.joueurQuiJoue = 1
+            this.joueur = `joueur${this.joueurQuiJoue}`
         }
     }
 

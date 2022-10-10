@@ -55,8 +55,8 @@ body {
     text-align: center;
     font-size: 40px;
     font-family: Bungee;
-    color: #000b18;
-    stroke: white;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px black;
 }
 
 #scores
@@ -173,4 +173,19 @@ form
 
 .Scolaire{
     background: #6BC555;
+}
+
+.joueur1
+{
+    color: #FFB800;
+}
+
+.joueur2
+{
+    color: #0066FF;
+}
+
+.joueur3
+{
+    color: #FF5C00;
 }
