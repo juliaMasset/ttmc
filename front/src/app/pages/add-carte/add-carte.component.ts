@@ -3,6 +3,7 @@ import {FormBuilder, NgForm} from '@angular/forms';
 import {CarteService} from '../../services/carte.service';
 import { defaultsDeep } from 'lodash';
 import {Router} from '@angular/router';
+import {Carte} from '../../models/carte.model';
 
 @Component({
   selector: 'app-add-carte',
@@ -10,7 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./add-carte.component.css']
 })
 export class AddCarteComponent implements OnInit {
-
+  carte=new Carte();
   constructor(private carteService: CarteService, private router: Router) { }
 
   ngOnInit() {
