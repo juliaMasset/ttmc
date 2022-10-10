@@ -21,9 +21,12 @@ questionQuatre: string;
   @Input()
 questionCinq: string;
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
