@@ -54,7 +54,7 @@ h1
     font-size: 45px;
 }
 
-p
+.regles
 {
     font-size: 20px;
     font-family: "Montserrat";
@@ -79,4 +79,9 @@ p
 .btn:hover {
     transform: scale(1.1);
     z-index: 1;
+}
+
+#titreJeu
+{
+    font-family: Bungee;
 }

@@ -7,7 +7,8 @@
 
         <div id="haut"> <!-- partie haute à droite : équipe à jouer et scores -->
             <div id="title">
-                Equipe {{joueurQuiJoue}}, <br> à toi de jouer
+                <div [ngClass]="joueur"> Equipe {{joueurQuiJoue}},</div>
+                à toi de jouer
             </div>
 
             <div id="scores"> <!-- zone des scores -->
@@ -39,9 +40,9 @@
                 {{carte?.titre}} <br>
                     <p> Tu te mets combien ? </p>
 
-                <form name="myForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <form name="myForm" (ngSubmit)="onSubmit(f)" #f="ngForm" ngNativeValidate>
                     <div class="form-group">
-                        <select class="form-control" id="niveau" name="niveau" ngModel>
+                        <select class="form-control" id="niveau" name="niveau" [ngModel]="niveauQuestion" required>
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
