@@ -3,6 +3,7 @@
     background: url("src/assets/pexels-fwstudio-164005.jpg");
     background-size: 100%;
     padding: 40px;
+    background-repeat: repeat;
 }
 
 h4{

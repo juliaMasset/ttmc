@@ -12,6 +12,7 @@ export class ListCartesComponent implements OnInit {
 
     reponsesAffichees = false;
     cartes: Carte[];
+    currentCarteId: number;
 
     constructor(private http: HttpClient,private carteService: CarteService) {
         this.cartes=[];
@@ -27,8 +28,10 @@ export class ListCartesComponent implements OnInit {
         });
     }
 
-    showReponses() {
+
+    showReponses(cardId: number) {
         this.reponsesAffichees=!this.reponsesAffichees;
+        this.currentCarteId=cardId;
     }
 
 }

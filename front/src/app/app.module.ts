@@ -14,6 +14,7 @@ import {CarteReponsesComponent} from './components/carte-reponses/carte-reponses
 import {CarteQuestionsComponent} from './components/carte/carte-questions.component';
 import {WinnerComponent} from './pages/winner/winner.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
