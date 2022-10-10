@@ -2,13 +2,13 @@
   <h4>Remplir le formulaire d'ajout</h4>
 
 
-      <form name="myForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <form name="myForm" (ngSubmit)="onSubmit(f)" #f="ngForm" ngNativeValidate>
 
         <div id="general">
           <h3>Thème</h3>
           <div class="form-group">
             <label for="categorie">Catégorie</label>
-            <select class="form-control" id="categorie" name="categorie" ngModel>
+            <select class="form-control" id="categorie" name="categorie" [(ngModel)]="carte.categorie" required>
               <option value="Improbable">Improbable</option>
               <option value="Mature">Mature</option>
               <option value="Plaisir">Plaisir</option>
@@ -19,7 +19,7 @@
             <label for="titre">
               Titre
             </label>
-            <input type="text" id="titre" class="form-control" name="titre" ngModel>
+            <input class="form-control" type="text" id="titre" name="titre" [(ngModel)]="carte.titre" required>
           </div>
         </div>
         <h3>Questions et réponses</h3>
@@ -29,31 +29,31 @@
           <label for="questionUne">
             Q°1
           </label>
-          <input type="text" id="questionUne" class="form-control" name="questionUne" ngModel>
+          <input type="text" id="questionUne" class="form-control" name="questionUne" [(ngModel)]="carte.questionUne" required>
         </div>
         <div class="form-group">
           <label for="questionDeux">
             Q°2
           </label>
-          <input type="text" id="questionDeux" class="form-control" name="questionDeux" ngModel>
+          <input type="text" id="questionDeux" class="form-control" name="questionDeux" [(ngModel)]="carte.questionDeux" required>
         </div>
         <div class="form-group">
           <label for="questionTrois">
             Q°3
           </label>
-          <input type="text" id="questionTrois" class="form-control" name="questionTrois" ngModel>
+          <input type="text" id="questionTrois" class="form-control" name="questionTrois" [(ngModel)]="carte.questionTrois" required>
         </div>
         <div class="form-group">
           <label for="questionQuatre">
             Q°4
           </label>
-          <input type="text" id="questionQuatre" class="form-control" name="questionQuatre" ngModel>
+          <input type="text" id="questionQuatre" class="form-control" name="questionQuatre" [(ngModel)]="carte.questionQuatre" required>
         </div>
         <div class="form-group">
           <label for="questionCinq">
             Q°5
           </label>
-          <input type="text" id="questionCinq" class="form-control" name="questionCinq" ngModel>
+          <input type="text" id="questionCinq" class="form-control" name="questionCinq" [(ngModel)]="carte.questionCinq" required>
         </div>
           </div>
 
@@ -62,31 +62,31 @@
           <label for="reponseUne">
             Réponse 1
           </label>
-          <input type="text" id="reponseUne" class="form-control" name="reponseUne" ngModel>
+          <input type="text" id="reponseUne" class="form-control" name="reponseUne" [(ngModel)]="carte.reponseUne" required>
         </div>
         <div class="form-group">
           <label for="reponseDeux">
             Réponse 2
           </label>
-          <input type="text" id="reponseDeux" class="form-control" name="reponseDeux" ngModel>
+          <input type="text" id="reponseDeux" class="form-control" name="reponseDeux" [(ngModel)]="carte.reponseDeux" required>
         </div>
         <div class="form-group">
           <label for="reponseTrois">
             Réponse 3
           </label>
-          <input type="text" id="reponseTrois" class="form-control" name="reponseTrois" ngModel>
+          <input type="text" id="reponseTrois" class="form-control" name="reponseTrois" [(ngModel)]="carte.reponseTrois" required>
         </div>
         <div class="form-group">
           <label for="reponseQuatre">
             Réponse 4
           </label>
-          <input type="text" id="reponseQuatre" class="form-control" name="reponseQuatre" ngModel>
+          <input type="text" id="reponseQuatre" class="form-control" name="reponseQuatre" [(ngModel)]="carte.reponseQuatre" required>
         </div>
         <div class="form-group">
           <label for="reponseCinq">
             Réponse 5
           </label>
-          <input type="text" id="reponseCinq" class="form-control" name="reponseCinq" ngModel>
+          <input type="text" id="reponseCinq" class="form-control" name="reponseCinq" [(ngModel)]="carte.reponseCinq" required>
         </div>
 
         </div>
@@ -98,7 +98,5 @@
         <button class="bouton" type="submit">AJOUTER</button>
 
       </form>
-
-
 
     </div>
