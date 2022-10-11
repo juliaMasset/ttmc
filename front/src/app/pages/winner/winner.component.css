@@ -14,37 +14,77 @@
     font-family: "Bungee";
     padding-bottom: 10em;
 }
-#pod1, #pod2, #pod3 {
+.pod1, .pod2, .pod3 {
     text-align: center;
     font-size: 40px;
-    background-color:  #1881BC;
+    border-radius: 5px;
     color: white;
     padding-left: 5%;
     padding-right: 5%;
 }
-#pod2 {
+
+.pod2 {
     height: 55%;
     display: flex;
     flex-direction: column;
 }
-#pod1 {
+
+.pod1 {
     height: 45%;
 }
-#pod3 {
+.pod3 {
     height: 40%;
 }
-#trophy {
+.trophy {
     height: 90px;
 }
 #title {
-    font-size: 30px;
-    position: relative;
+    padding-top: 50px;
+    height: 60px;
     text-align: center;
-    padding-top: 3em;
-    font-family: "Bungee";
+    font-size: 40px;
+    font-family: Bungee;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px black;
 }
 
 .pawn
 {
     height: 80px;
+}
+
+.joueur1
+{
+    color: #FFB800;
+}
+
+.joueur2
+{
+    color: #0066FF;
+}
+
+.joueur3
+{
+    color: #FF5C00;
+}
+
+.fondJ1
+{
+    background-color: #FFB800;
+    width: max-content;
+    height: max-content;
+}
+
+.fondJ2
+{
+    background-color: #0066FF;
+    width: max-content;
+    height: max-content;
+}
+
+.fondJ3
+{
+    background-color: #FF5C00;
+    width: max-content;
+    height: max-content;
 }
