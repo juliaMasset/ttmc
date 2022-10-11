@@ -10,9 +10,6 @@ import {GameModel} from '../../models/game.model';
 export class WinnerComponent {
 
     game : GameModel
-    scoreJ1 = null
-    scoreJ2 = null
-    scoreJ3 = null
     premier = `joueur${this.gameService.game.winner}`
     scoresJoueurs = new Map()
     classement = new Array()
