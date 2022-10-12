@@ -1,5 +1,5 @@
 # TTMC
-L'objectif du projet est de réaliser en équipe de 3 sous format digital le jeu de société "TTMC".
+L'objectif du projet est de réaliser en équipe de 3 sous format digital le jeu de société "TTMC". Développé avec les frameworks Spring et Angular.
 
 ## Règles du jeu
 Le but du jeu est d’être le premier à parcourir le plateau (contenant 35 cases) en répondant aux questions posées.
