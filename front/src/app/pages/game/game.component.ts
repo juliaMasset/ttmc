@@ -41,7 +41,7 @@ export class GameComponent implements OnInit {
 
     nextEtape() {
         this.etape++
-        if(this.numCaseJoueurs[this.joueurQuiJoue - 1] >= 3){
+        if(this.numCaseJoueurs[this.joueurQuiJoue - 1] >= 35){
             this.service.saveGame({winner: this.joueurQuiJoue, score: this.numCaseJoueurs})
             this.router.navigateByUrl('winner')
         }
