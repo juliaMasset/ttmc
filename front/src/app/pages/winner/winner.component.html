@@ -3,17 +3,23 @@
     <div id="title"><div [ngClass]="premier"> Equipe {{game.winner}},</div> vous avez gagné !</div>
 
     <div id="podium">
-        <div class="pod1" [ngClass]="fondJ2">
-            2
+
+        <div class="pod2">
+            <div [ngClass]="fond2">
+                2
+            </div>
         </div>
 
-        <div class="pod2" [ngClass]="fondJ1">
-            1
-            <img class="trophy" src="../../../assets/trophy.png" alt="Trophée">
+        <div class="pod1">
+            <div [ngClass]="fond1">
+                 1
+            </div>
         </div>
 
-        <div class="pod3" [ngClass]="fondJ3">
-            3
+        <div class="pod3">
+            <div [ngClass]="fond3">
+                3
+            </div>
         </div>
 
     </div>

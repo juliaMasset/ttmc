@@ -13,19 +13,19 @@ export class WinnerComponent {
     scoresJoueurs = new Map()
     classement = new Array()
     premier = null
-    fondJ1=null
-    fondJ2=null
-    fondJ3=null
+    fond1=null
+    fond2=null
+    fond3=null
 
     constructor(private gameService : GameService) {
         this.game=this.gameService.game
         this.premier = `joueur${this.gameService.game.winner}`
         this.scoresJoueurs.set(1, this.gameService.game.score[0])
         this.scoresJoueurs.set(2, this.gameService.game.score[1])
-        this.scoresJoueurs.set(3, this.gameService.game.score[3])
+        this.scoresJoueurs.set(3, this.gameService.game.score[2])
         this.classement = Array.from(new Map([...this.scoresJoueurs].sort((a, b)=>b[1]-a[1])).keys())
-        this.fondJ1=`fondJ${this.gameService.game.winner}`
-        this.fondJ2 = `fondJ${this.classement[1]}`
-        this.fondJ3 = `fondJ${this.classement[2]}`
+        this.fond1=`fond${this.gameService.game.winner}`
+        this.fond2 = `fond${this.classement[1]}`
+        this.fond3 = `fond${this.classement[2]}`
     }
 }
