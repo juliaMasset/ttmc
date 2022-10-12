@@ -1,4 +1,5 @@
 # TTMC
+L'objectif du projet est de réaliser en équipe de 3 sous format digital le jeu de société "TTMC".
 
 ## Règles du jeu
 Le but du jeu est d’être le premier à parcourir le plateau (contenant 35 cases) en répondant aux questions posées.
