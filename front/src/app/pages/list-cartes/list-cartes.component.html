@@ -13,17 +13,18 @@
         <app-carte *ngIf="!reponsesAffichees || currentCarteId != carte.id"  [categorie]="carte.categorie" [titre]="carte.titre" [questionUne]="carte.questionUne" [questionDeux]="carte.questionDeux" [questionTrois]="carte.questionTrois" [questionQuatre]="carte.questionQuatre" [questionCinq]="carte.questionCinq"></app-carte>
         <app-carte-reponses *ngIf="reponsesAffichees && currentCarteId === carte.id"  [categorie]="carte.categorie" [reponseUne]="carte.reponseUne" [reponseDeux]="carte.reponseDeux" [reponseTrois]="carte.reponseTrois" [reponseQuatre]="carte.reponseQuatre" [reponseCinq]="carte.reponseCinq"></app-carte-reponses>
         <div id="buttons">
-        <button *ngIf="!reponsesAffichees || currentCarteId != carte.id"  id="voir" type="button" class="bouton" (click)="showReponses(carte.id)">Voir les réponses</button>
-          <button *ngIf="reponsesAffichees && currentCarteId === carte.id" id="voirReponses" type="button" class="bouton" (click)="showReponses(carte.id)">Voir les questions</button>
+            <button *ngIf="!reponsesAffichees || currentCarteId != carte.id"  id="voir" type="button" class="bouton" (click)="showReponses(carte.id)">Voir les réponses</button>
+            <button *ngIf="reponsesAffichees && currentCarteId === carte.id" id="voirReponses" type="button" class="bouton" (click)="showReponses(carte.id)">Voir les questions</button>
 
-          <button id="delete" type="button" class="boutonDelete" (click)="deleteCarte(carte.id)"><img id="imageDelete" src="./assets/deleteIcon.png"></button>
-        </div>
-      </div>
-    </div>
-    </div>
+            <button type=button id="delete" type="button" class="boutonDelete"  (click)="clickMethod(carte.id)"><img id="imageDelete" src="./assets/deleteIcon.png"></button>
 
-  </div>
-</div>
+         </div>
+       </div>
+     </div>
+     </div>
+
+   </div>
+ </div>
 
 
 

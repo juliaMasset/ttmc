@@ -28,6 +28,11 @@ export class ListCartesComponent implements OnInit {
         });
     }
 
+    clickMethod(id: number) {
+        if(confirm('Es-tu sûr de vouloir supprimer cette carte ?')) {
+            this.deleteCarte(id);
+        }
+    }
 
     showReponses(cardId: number) {
         this.reponsesAffichees=!this.reponsesAffichees;
