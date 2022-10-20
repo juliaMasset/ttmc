@@ -9,7 +9,6 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {GameComponent} from './pages/game/game.component';
-import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
 import {CarteReponsesComponent} from './components/carte-reponses/carte-reponses.component';
 import {CarteQuestionsComponent} from './components/carte/carte-questions.component';
 import {WinnerComponent} from './pages/winner/winner.component';
@@ -22,7 +21,6 @@ import {WinnerComponent} from './pages/winner/winner.component';
     AddCarteComponent,
     ListCartesComponent,
     GameComponent,
-    TeamsPageComponent,
     CarteReponsesComponent,
     CarteQuestionsComponent,
     WinnerComponent

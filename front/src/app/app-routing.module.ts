@@ -4,7 +4,6 @@ import {ListCartesComponent} from './pages/list-cartes/list-cartes.component';
 import {AddCarteComponent} from './pages/add-carte/add-carte.component';
 import {WelcomePageComponent} from './pages/welcome-page/welcome-page.component';
 import {GameComponent} from './pages/game/game.component';
-import {TeamsPageComponent} from './pages/teams-page/teams-page.component';
 import {WinnerComponent} from './pages/winner/winner.component';
 
 const routes: Routes = [
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: 'add-carte', component: AddCarteComponent },
   { path: 'list-cartes', component: ListCartesComponent },
   { path: 'game', component: GameComponent},
-  {path: 'teams-page', component: TeamsPageComponent},
   {path: 'winner', component: WinnerComponent}];
 
 @NgModule({
