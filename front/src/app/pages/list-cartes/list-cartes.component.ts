@@ -29,7 +29,7 @@ export class ListCartesComponent implements OnInit {
             this.cartes = this.cartes.filter(carte => carte.id !== this.idToDelete)
         });
         console.log('deletecarte:' + this.idToDelete);
-        this.closePopup();
+        this.displayStyle = 'none';
     }
 
     openPopup(id: number){

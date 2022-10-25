@@ -137,13 +137,13 @@ h3{
 }
 
 #delete:hover {
-    background-color: #ad1515;
+    background-color: #ea4a4a;
 }
 
 #annuler
 {
     width: 25%;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 #corps-popup {
@@ -152,4 +152,10 @@ h3{
     padding-top: 5px;
     padding-bottom: 5px;
     color: #4c5359;
+}
+
+#choix-bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }

@@ -27,8 +27,10 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div id="corps-popup">Es-tu sûr de vouloir supprimer cette carte ?</div>
-                        <button type=button class="boutonDelete" id="annuler" (click)="closePopup()">Annuler</button>
-                        <button type=button class="boutonDelete"  id="delete" (click)="deleteCarte()">Supprimer</button>
+                        <div id="choix-bouton">
+                            <button type=button class="boutonDelete" id="annuler" (click)="closePopup()">Annuler</button>
+                            <button type=button class="boutonDelete"  id="delete" (click)="deleteCarte()">Supprimer</button>
+                        </div>
                     </div>
                 </div>
             </div>
