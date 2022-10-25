@@ -16,25 +16,26 @@
             <button *ngIf="!reponsesAffichees || currentCarteId != carte.id"  id="voir" type="button" class="bouton" (click)="showReponses(carte.id)">Voir les réponses</button>
             <button *ngIf="reponsesAffichees && currentCarteId === carte.id" id="voirReponses" type="button" class="bouton" (click)="showReponses(carte.id)">Voir les questions</button>
 
-            <button type=button id="delete" type="button" class="boutonDelete"  (click)="openPopup()"><img id="imageDelete" src="./assets/deleteIcon.png"></button>
-
-            <div *ngIf="currentCarteId != carte.id" class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title">Es-tu sûr de vouloir supprimer cette carte ?</h2>
-                        </div>
-                        <div class="modal-footer">
-                            <button type=button class="btn btn"  (click)="closePopup()">Annuler</button>
-                            <button type=button class="btn btn-danger"  (click)="deleteCarte(carte.id)">Supprimer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <button type=button id="delete" type="button" class="boutonDelete"  (click)="openPopup(carte.id)"><img id="imageDelete" src="./assets/deleteIcon.png"></button>
 
          </div>
        </div>
      </div>
+
+        <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Es-tu sûr de vouloir supprimer cette carte ?</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type=button class="btn btn"  (click)="closePopup()">Annuler</button>
+                        <button type=button class="btn btn-danger"  (click)="deleteCarte()">Supprimer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
      </div>
 
    </div>

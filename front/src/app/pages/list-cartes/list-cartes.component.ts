@@ -14,6 +14,7 @@ export class ListCartesComponent implements OnInit {
     cartes: Carte[];
     currentCarteId: number;
     displayStyle = 'none';
+    idToDelete : number;
 
     constructor(private http: HttpClient,private carteService: CarteService) {
         this.cartes=[];
@@ -23,24 +24,28 @@ export class ListCartesComponent implements OnInit {
         this.carteService.getCartes().subscribe(cartes => this.cartes = cartes);
     }
 
-    deleteCarte(id: number) {
-        this.carteService.deleteCarte(id).subscribe(succes => {
-            this.cartes = this.cartes.filter(carte => carte.id !== id)
+    deleteCarte() {
+        this.carteService.deleteCarte(this.idToDelete).subscribe(succes => {
+            this.cartes = this.cartes.filter(carte => carte.id !== this.idToDelete)
         });
+        console.log('deletecarte:' + this.idToDelete);
     }
 
     clickMethod(id: number) {
         if(confirm('Es-tu sûr de vouloir supprimer cette carte ?')) {
-            this.deleteCarte(id);
+            this.deleteCarte();
         }
     }
 
-    openPopup(){
+    openPopup(id: number){
         this.displayStyle = 'block';
+        this.idToDelete = id;
+        console.log(id);
     }
 
     closePopup(){
         this.displayStyle = 'none';
+        this.idToDelete = null;
     }
 
     showReponses(cardId: number) {
