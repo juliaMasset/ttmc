@@ -29,12 +29,7 @@ export class ListCartesComponent implements OnInit {
             this.cartes = this.cartes.filter(carte => carte.id !== this.idToDelete)
         });
         console.log('deletecarte:' + this.idToDelete);
-    }
-
-    clickMethod(id: number) {
-        if(confirm('Es-tu sûr de vouloir supprimer cette carte ?')) {
-            this.deleteCarte();
-        }
+        this.closePopup();
     }
 
     openPopup(id: number){
