@@ -13,6 +13,7 @@ export class ListCartesComponent implements OnInit {
     reponsesAffichees = false;
     cartes: Carte[];
     currentCarteId: number;
+    displayStyle = 'none';
 
     constructor(private http: HttpClient,private carteService: CarteService) {
         this.cartes=[];
@@ -32,6 +33,14 @@ export class ListCartesComponent implements OnInit {
         if(confirm('Es-tu sûr de vouloir supprimer cette carte ?')) {
             this.deleteCarte(id);
         }
+    }
+
+    openPopup(){
+        this.displayStyle = 'block';
+    }
+
+    closePopup(){
+        this.displayStyle = 'none';
     }
 
     showReponses(cardId: number) {
