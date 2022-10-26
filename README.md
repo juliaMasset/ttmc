@@ -31,3 +31,19 @@ Les cartes sont tirées dans 4 catégories en fonction de la case où se trouve 
 - Afficher les réponses de la carte tirée 
 - Indiquer si l'équipe a bien répondu à la question et avancement du numéro de case en fonction
 - Afficher le podium lorsqu'une équipe a atteint la case 35
+
+
+## Comment lancer le projet ?
+### 1. Lancer le back 
+- Ouvrir le dossier "api" dans l'IDE IntelliJ
+- Initialiser la bdd avant de run le projet avec la commande :
+docker run --name mariadb --rm -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=defaultdb -p 3306:3306 mariadb
+- Connecter la bdd à l'IDE IntelliJ via l'onglet Database 
+- Lancer les scripts sql contenus dans le dossier "/initdb" 
+- Run le projet et ouvrir une page http://localhost:8080/cartes pour visualiser le back
+
+### 2. Lancer le front
+- Ouvrir le dossier front dans IntelliJ
+- Lancer la commande suivante afin d'installer toutes les dépendances précisées dans le fichier package.json et de générer le package-lock.json : npm i
+- Démarrer le serveur avec la commande ng serve
+- Ouvrir la page web http://localhost:4200/
