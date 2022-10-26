@@ -37,7 +37,7 @@ Les cartes sont tirées dans 4 catégories en fonction de la case où se trouve 
 ### 1. Lancer le back 
 - Ouvrir le dossier "api" dans l'IDE IntelliJ
 - Initialiser la bdd avant de run le projet avec la commande :
-docker run --name mariadb --rm -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=defaultdb -p 3306:3306 mariadb
+`docker run --name mariadb --rm -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=defaultdb -p 3306:3306 mariadb`
 - Connecter la bdd à l'IDE IntelliJ via l'onglet Database 
 - Lancer les scripts sql contenus dans le dossier "/initdb" 
 - Run le projet et ouvrir une page http://localhost:8080/cartes pour visualiser le back
