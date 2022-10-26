@@ -117,6 +117,9 @@
               "devServerTarget": "epf-live-coding:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }},
